@@ -6,7 +6,6 @@
     - Generate locales
   with_items:
     - "en_US.UTF-8 UTF-8"
-    - "{{ locale }} UTF-8"
 
 - name: Set localtime (/etc/localtime)
   copy: remote_src=yes src=/usr/share/zoneinfo/{{ timezone }} dest=/etc/localtime

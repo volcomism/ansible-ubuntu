@@ -5,7 +5,6 @@
   with_items:
     - pwgen
     - imagemagick
-    - libav-tools
     - cowsay
     - fortune
 

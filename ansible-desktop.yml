@@ -8,7 +8,7 @@
      - { role: common, become: true }
      - { role: zsh, become: true }
      - { role: dotfiles, become: true }
-     - { role: vim, become: true }
+    # - { role: vim, become: true }
     # - { role: java-openjdk, become: true }
     # - { role: phantomjs, become: true }
     # - { role: projects-installer }
@@ -18,7 +18,7 @@
     # - { role: beanstalkd, become: true }
     # - { role: blackfire, become: true }
     # - { role: composer, become: true }
-     - { role: docker, become: true }
+    # - { role: docker, become: true }
     # - { role: elasticsearch, become: true }
     # - { role: exim, become: true }
      - { role: fail2ban, become: true }
@@ -31,25 +31,25 @@
     # - { role: mysql56, become: true }
     # - { role: nginx, become: true }
     # - { role: nginx-php-fpm, become: true }
-     - { role: nodejs, become: true }
+    # - { role: nodejs, become: true }
     # - { role: php, become: true }
     # - { role: php-pecl, become: true }
     # - { role: php-phar-tools, become: true }
      - { role: python, become: true }
     # - { role: redis, become: true }
-     - { role: rbenv, become: true }
+    # - { role: rbenv, become: true }
      - { role: ssh, become: true }
     # Desktop roles
      - { role: desktop, become: true }
-     - { role: desktop-cleanup, become: true }
-     - { role: desktop-autostart, become: true }
+    # - { role: desktop-cleanup, become: true }
+    # - { role: desktop-autostart, become: true }
     # - { role: desktop-preferences-unity }
     # - { role: adapta-theme, become: true }
-     - { role: albert, become: true }
+    # - { role: albert, become: true }
     # - { role: altyo, become: true }
     # - { role: arc-theme, become: true }
     # - { role: atom, become: true }
-     - { role: chromium, become: true }
+    # - { role: chromium, become: true }
     # - { role: claws-mail, become: true }
     # - { role: compton, become: true }
     # - { role: copyq, become: true }
@@ -64,7 +64,7 @@
     # - { role: hubic, become: true }
     # - { role: indicator-sysmonitor, become: true }
     # - { role: ksuperkey, become: true }
-     - { role: libreoffice, become: true }
+    # - { role: libreoffice, become: true }
     # - { role: maim, become: true }
     # - { role: min, become: true }
     # - { role: mysql-workbench, become: true }
@@ -80,9 +80,9 @@
      - { role: shutter, become: true }
     # - { role: sift, become: true }
     # - { role: slop, become: true }
-     - { role: skype, become: true }
-     - { role: smartgit, become: true }
-     - { role: spotify, become: true }
+    # - { role: skype, become: true }
+    # - { role: smartgit, become: true }
+    # - { role: spotify, become: true }
     # - { role: sublime3, become: true }
     # - { role: sunflower, become: true }
     # - { role: teamviewer, become: true }
