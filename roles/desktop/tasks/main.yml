@@ -3,36 +3,10 @@
 - name: Install common desktop packages
   apt: pkg={{ item }} state=latest update_cache=yes cache_valid_time={{ aptcachetime }}
   with_items:
-    - ack-grep
-    - aptitude
-    - bash-completion
-    - bzip2
-    - curl
-    - git
-    - git-core
-    - git-flow
-    - git-email
-    - git-extras
-    - git-svn
-    - gzip
-    - htop
-    - pwgen
-    - tar
     - terminator
-    - tig
     - ubuntu-restricted-extras # MP3, Microsoft fonts, Flash plugin, LAME and DVD playback
     - unetbootin # create bootable USB drives
-    - unzip
-    - vim
     - vlc
-    - wget
-    - zsh
-
-- name: Linux | Update cache
-  apt: update_cache=yes cache_valid_time=3600
-
-- name: Linux | Upgrade
-  apt: upgrade=dist
 
 - name: Install common desktop packages if Ubuntu 18.04
   apt: pkg={{ item }} state=latest update_cache=yes cache_valid_time={{ aptcachetime }}

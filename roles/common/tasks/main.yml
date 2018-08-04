@@ -14,47 +14,51 @@
 - name: Ensure that Aptitude repositories are up to date
   apt: update_cache=yes cache_valid_time={{ aptcachetime }}
 
+- name: Linux | Upgrade
+  apt: upgrade=dist
+
 - name: Install common packages
   apt: pkg={{ item }} state=latest update_cache=yes cache_valid_time={{ aptcachetime }}
   with_items:
-    - afuse
+    - ack-grep
+    - autojump
     - aptitude
-    - axel
     - build-essential
+    - bash-completion
     - bzip2
     - colortest
     - curl
     - diffutils
     - dos2unix
     - fdupes
-    - ftp-ssl
     - gawk
     - gcc
     - git
+    - git-core
+    - git-crypt
+    - git-flow
+    - git-email
+    - git-extras
+    - git-svn
     - grep
     - gzip
     - htop
     - httping
+    - httpie
     - iftop
-    - imagemagick
     - iotop
+    - jq
     - less
-    - lftp
     - make
-    - nano
-    - nfs-common
     - nmap
     - openssl
     - p7zip
     - pv
     - pwgen
-    - ranger
     - rar
     - rsync
-    - smbclient
     - software-properties-common
-    - sshfs
-    - sshpass
+    - sysdig
     - tar
     - tmux
     - trash-cli
@@ -63,6 +67,7 @@
     - vim
     - wget
     - whois
+    - zsh
     - zip
 
 - name: Upgrade installed packages
