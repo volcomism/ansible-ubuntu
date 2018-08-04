@@ -3,32 +3,42 @@
 - name: Install common desktop packages
   apt: pkg={{ item }} state=latest update_cache=yes cache_valid_time={{ aptcachetime }}
   with_items:
-    - bleachbit
-    - easytag # audio files metadata management
-    - byzanz # screen recording
-    - geany
-    - libnotify-bin
-    - inotify-tools
-    - meld # Diff / merge tool
-    - cifs-utils
-    - mpv
-    - pinta # light paint.net equivalent
-    - rhythmbox
-    - rxvt-unicode-256color
-    - sox # to play sounds
-    - tilda # lighter than guake
+    - ack-grep
+    - aptitude
+    - bash-completion
+    - bzip2
+    - curl
+    - git
+    - git-core
+    - git-flow
+    - git-email
+    - git-extras
+    - git-svn
+    - gzip
+    - htop
+    - pwgen
+    - tar
+    - terminator
+    - tig
     - ubuntu-restricted-extras # MP3, Microsoft fonts, Flash plugin, LAME and DVD playback
     - unetbootin # create bootable USB drives
+    - unzip
+    - vim
     - vlc
-    - wmctrl # to control windows
-    - xclip # to manipulate the clipboard
-    - xdotool # to control windows
+    - wget
+    - zsh
 
-- name: Install common desktop packages if Ubuntu 16.04
+- name: Linux | Update cache
+  apt: update_cache=yes cache_valid_time=3600
+
+- name: Linux | Upgrade
+  apt: upgrade=dist
+
+- name: Install common desktop packages if Ubuntu 18.04
   apt: pkg={{ item }} state=latest update_cache=yes cache_valid_time={{ aptcachetime }}
   with_items:
     - fonts-hack-ttf
-  when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '16.04'
+  when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '18.04'
 
 - name: Block Ubuntu product search in system host file
   lineinfile: dest=/etc/hosts regexp="^127\.0\.0\.1   productsearch.ubuntu.com$" line="127.0.0.1   productsearch.ubuntu.com" state=present

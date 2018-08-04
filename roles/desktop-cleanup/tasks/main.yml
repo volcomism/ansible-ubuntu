@@ -55,12 +55,10 @@
   file: path="{{ ansible_env.HOME }}/{{ item }}" force=yes state=absent
   with_items:
     - Documents
-    - Modèles
     - Images
-    - Vidéos
-    - Musique
+    - Videos
+    - Music
     - Public
-    - Téléchargements
 
 - name : Run xdg-user-dirs-update
   shell: xdg-user-dirs-update
